@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image: url(https://wallpaperset.com/w/full/6/a/b/162633.jpg);
+          
+          
+           background-repeat: repeat;
+            background-position: center;
+           
+        }
+        .container
+        {
+           
+           background-image: url(https://e1.pxfuel.com/desktop-wallpaper/10/90/desktop-wallpaper-plain-backgrounds-posted-by-ryan-anderson-plain-thumbnail.jpg);
+            padding: 10px 10px 10px 10px;
+            margin:solid;
+            border: solid 5px;
+            width:300px;
+            align-items: center;
+            background-size: 265px;
+            border-color: rgba(223, 226, 12, 0.897);
+            color: antiquewhite;
+             
+        }
+        h1{
+            display: inline;
+        }
+        .img
+        {
+          width: 25px;
+        }
+    </style>
+</head>
+<body>
+    <center><div class="container" ><h1>Let's Play </h1><br><h1>Rock Paper Scissors </h1><br>
+        <br>
+        <button onclick="pm('Rock')" style="background-color:rgb(4, 95, 31)">Rock</button>
+        <button
+        onclick="pm('Paper') " 
+        >Paper</button>
+        <button
+        onclick="pm('Scissor')"style="background-color:red" 
+        >Scissors</button></div></center>
+    
+   <script>
+   function pm(pm)
+   {
+      let cm=cmove();
+      if(pm==='Rock'){
+        if(cm==='Rock')
+          {
+           alert('The game is tie because you and system  both choosed Rock');
+            
+          }
+          else if(cm==='Scissor')
+          {
+           alert('You Won!! the system choosed ' +cm);
+          }
+          else
+          {
+           alert('You Lost!! the system choosed '+cm);
+          }
+      }
+      else if(pm==='Paper')
+      {
+        if(cm==='Paper')
+        {
+            alert('The game is tie because you and system  both choosed Paper');
+          
+        }
+        else if(cm==='Rock')
+        {
+           alert('You Won!! the system choosed '+cm);
+        }
+        else
+        {
+           alert('You lost!! the system choosed '+cm);
+        }
+      }
+      else
+      {
+        if(cm==='Scissor')
+        {
+            alert('The game is tie because you and system  both choosed Scissor');
+          
+        }
+        else if(cm==='Paper')
+        {
+           alert('You Won!! the system choosed '+cm);
+        }
+        else
+        {
+           alert('You Lost!! the system choosed '+cm);
+        }
+      }
+      
+   }
+   function cmove()
+   {
+    const rn=Math.random();
+      let cm='';
+    
+      if(rn>=0 && rn<(1/3))
+      {
+        cm='Rock';
+      }
+      else  if(rn>=(1/3) && rn<(2/3))
+      {
+        cm='Paper';
+      }
+      else
+      {
+        cm='Scissor';
+      }
+      return cm;
+   }
+   </script> 
+</body>
+</html>
